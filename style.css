@@ -12,7 +12,9 @@ body{
     background-image: linear-gradient(135deg, #D9AFD9 00%, #97D9E1 100%);
 }
 
-.all > div > h1 { display: flex; justify-content: center; align-items: center; }
+.all { margin: 1rem; }
+
+.all > div > h1 { display: flex; justify-content: center; align-items: center;}
 
 .relogio, .calendario {
     display: flex;
@@ -42,6 +44,19 @@ body{
     letter-spacing: 3px;
 }
 
+.info-js {
+    opacity: 0.9;
+    border: 2px solid;
+    transition: .5s ease;
+}
+
+.info-js:hover{
+    background-color: #d9afd9;
+    color: #1c2c2e;
+    opacity: 1;
+    border-color: #1c2c2e;
+}
+
 .relogio span, .calendario span { font-weight: bolder; font-size: 3.5rem; }
 
 .relogio span.tempo, .calendario span.dia { font-size: 1.5rem; }
@@ -50,13 +65,14 @@ body{
 
 @media screen and (max-width: 800px) {
 
-    body { background: #D9AFD9;}
+    body { background: #D9AFD9; }
 
     .all {
         display: grid;
         grid-template-columns: repeat(1, 2fr);
-        width: 90%;
+        width: 50%;
         height: 100vh;
+        margin-bottom: 1rem;
     }
 
     .relogio, .calendario {
@@ -67,11 +83,11 @@ body{
         width: 100%;
     }
 
-    h1 { margin-top: 20px; }
-
-    .relogio div, .calendario div { height: 25%; width: 50%; }
-
-    .relogio span, .calendario span { font-size: 2.5rem; }
-
+    h1 { margin-top: 20px; font-size: 50px;}
+    
+    .relogio div, .calendario div { height: 25%; width: 60%; }
+    
+    .relogio span, .calendario span { font-size: 3rem; }
+    
     .relogio span.tempo { font-size: 1rem; }
 }
